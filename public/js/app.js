@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit', (e) => {
 
     weatherFormSubmitBtn.innerHTML = 'Please wait...'
 
-    fetch(`http://localhost:3000/weather?address=${location}`).then(res => {
+    fetch(`/weather?address=${location}`).then(res => {
         res.json().then(data => {
             weatherFormSubmitBtn.innerHTML = weatherFormSubmitBtnText
             if (data.err) {
